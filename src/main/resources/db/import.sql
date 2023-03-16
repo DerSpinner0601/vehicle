@@ -1,3 +1,5 @@
+-- Postgres läuft in Docker. Start in Ubuntu-Terminal mit "sudo service docker start"
+
 -- PERSON
 INSERT INTO X_PERSON
     VALUES (nextval('person_sequence'), '2000-01-02', 'John Doe');
