@@ -1,5 +1,7 @@
 package at.htl.vehicle.person;
 
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,7 +12,8 @@ import javax.ws.rs.core.MediaType;
 @Path("person")
 public class PersonResource {
     @Inject
-    PersonDao personDao;
+    //PersonDao personDao; -- nur nötig, wenn man zusätzliche Zugriffsroutinen braucht
+    PanacheRepository<Person> personDao;
 
     @Inject
     PersonMapper personMapper;

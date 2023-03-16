@@ -3,6 +3,7 @@ package at.htl.vehicle.vehicle;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
@@ -29,4 +30,12 @@ public class VehicleDao {
 //        List<Vehicle> vehicles = query.getResultList();
 //        return vehicles;
 //    }
+
+    //@Transactional
+    public boolean create(Vehicle vehicle)
+    {
+        em.persist(vehicle);
+
+        return true;
+    }
 }

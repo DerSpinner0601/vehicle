@@ -20,9 +20,8 @@ public class Person {
     {
     }
 
-    public Person(Long id, String name, LocalDate dob)
+    public Person(String name, LocalDate dob)
     {
-        this.id = id;
         this.name = name;
         this.dob = dob;
     }

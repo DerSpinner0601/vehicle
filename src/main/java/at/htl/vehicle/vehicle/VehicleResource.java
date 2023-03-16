@@ -32,4 +32,6 @@ public class VehicleResource {
                 .map(vehicleMapper::fromEntity)
                 .toList();
     }
+
+
 }
