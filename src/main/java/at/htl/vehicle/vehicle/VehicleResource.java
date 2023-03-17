@@ -17,7 +17,7 @@ public class VehicleResource {
     @Inject
     VehicleDao vehicleDao;
     @GET
-    @Path("{id}/{xy:.*}")
+    @Path("{id}")
     public VehicleDto find(@PathParam("id") long id)
     {
         return vehicleMapper.fromEntity(vehicleDao.findById(id));
